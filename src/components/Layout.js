@@ -38,7 +38,7 @@ const TemplateWrapper = ({ children }) => (
           <meta property="og:url" content="/2019/" />
           <meta property="og:image" content={`${data.site.siteMetadata.siteUrl}${data.site.pathPrefix}/img/og-image.jpg`}/>
           <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:image" content={`${data.site.siteMetadata.siteUrl}/2019/twitter-card.jpg`}/>
+          <meta name="twitter:image" content={`${data.site.siteMetadata.siteUrl}${data.site.pathPrefix}/img/og-image.jpg`}/>
         </Helmet>
         <Navbar />
         <div>{children}</div>

@@ -13,7 +13,9 @@ const TemplateWrapper = ({ children }) => (
             siteMetadata {
               title,
               description,
+              siteUrl,
             }
+            pathPrefix
           }
         }
     `}
@@ -34,7 +36,9 @@ const TemplateWrapper = ({ children }) => (
 	        <meta property="og:type" content="business.business" />
           <meta property="og:title" content={data.site.siteMetadata.title} />
           <meta property="og:url" content="/2019/" />
-          <meta property="og:image" content="/2019/img/og-image.jpg" />
+          <meta property="og:image" content={`${data.site.siteMetadata.siteUrl}${data.site.pathPrefix}/img/og-image.jpg`}/>
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:image" content={`${data.site.siteMetadata.siteUrl}/2019/twitter-card.jpg`}/>
         </Helmet>
         <Navbar />
         <div>{children}</div>

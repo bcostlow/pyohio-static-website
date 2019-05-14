@@ -43,7 +43,7 @@ const Footer = () => (
                 <Img fixed={data.allSponsorLevels.edges[0].node.sponsors[0].web_logo.local.childImageSharp.resize}
                 alt={data.allSponsorLevels.edges[0].node.sponsors[0].name}
                 />
-                <p>and our other sponsors.</p>
+                <p>and <a href="/sponsors">our other sponsors</a>.</p>
                 </div>
             }
             <a href="https://www.netlify.com">

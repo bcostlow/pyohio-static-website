@@ -1,5 +1,5 @@
 import React from 'react'
-import { StaticQuery, graphql } from 'gatsby'
+import { Link, StaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 
 const Footer = () => (
@@ -43,7 +43,7 @@ const Footer = () => (
                 <Img fixed={data.allSponsorLevels.edges[0].node.sponsors[0].web_logo.local.childImageSharp.resize}
                 alt={data.allSponsorLevels.edges[0].node.sponsors[0].name}
                 />
-                <p>and <a href="/sponsors">our other sponsors</a>.</p>
+                <p>and our other <Link to="/sponsors">2019 sponsors</Link>.</p>
                 </div>
             }
             <a href="https://www.netlify.com">

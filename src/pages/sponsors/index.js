@@ -41,7 +41,7 @@ export default class SponsorsPage extends React.Component {
                       <div className="card-header">
                         <h3 className="card-header-title">{sponsor.name}</h3>
                       </div>
-                      <div className="card-content">
+                      <div className="card-content ">
                         <p>{sponsor.description}</p>
                       </div>
                       <div className="card-footer">

@@ -12,6 +12,7 @@ const Footer = () => (
           name
             sponsors {
               name
+              url
               web_logo {
                 local {
                   childImageSharp{
@@ -40,9 +41,10 @@ const Footer = () => (
             {data.allSponsorLevels.edges[0].node.sponsors != null &&
                 <div>
                 <p>PyOhio is made possible by our premier sponsor:</p>
+                <a href={data.allSponsorLevels.edges[0].node.sponsors[0].url}>
                 <Img fixed={data.allSponsorLevels.edges[0].node.sponsors[0].web_logo.local.childImageSharp.resize}
                 alt={data.allSponsorLevels.edges[0].node.sponsors[0].name}
-                />
+                /></a>
                 <p>and our other <Link to="/sponsors">2019 sponsors</Link>.</p>
                 </div>
             }
